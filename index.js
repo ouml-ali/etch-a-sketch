@@ -31,9 +31,9 @@ createGridOfSquares(rowsNumber, columnsNumber);
 
 
 
-colorPicker.addEventListener("input", function() {
-  console.log("color picked :" + this.value );
-});
+// colorPicker.addEventListener("input", function() {
+//   console.log("color picked :" + this.value );
+// });
 
 pickColorButton.addEventListener('click', function() {
     normalColorEnabled = true;
