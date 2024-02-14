@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     height: 100%;
+    background-color: #FFF6F2;
 }
   
 *, *:before, *:after {
@@ -20,7 +21,38 @@ ol, ul {
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
     padding: 2rem;
+}
+
+
+
+#preference-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #C00000;
+    border-radius: 10px;
+    height: 400px;
+    width: 200px;
+    padding: 1rem;
+}
+
+input[type="color"] {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .sketch-frame {
     display: flex;
@@ -31,7 +63,10 @@ body {
     border-radius: 10px;
     height: 600px;
     width: 600px;
+    
 }
+
+
 
 .sketch-header {
     font-family: "Dancing Script", cursive;
@@ -46,8 +81,10 @@ body {
 
 .sketch-container {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: rgb(238, 238, 238);
+
     border-radius: 5px;
     height: 400px;
     width: 400px;
@@ -65,9 +102,4 @@ body {
     border-radius: 100%;
     height: 90px;
     width: 90px;
-}
-
-.grid-square {
-    border: 0.5px solid black;
-    background-color: azure;
 }
