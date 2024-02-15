@@ -3,6 +3,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #FFF6F2;
 }
   
@@ -22,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
     padding: 2rem;
 }
 
@@ -39,6 +40,7 @@ body {
     height: 400px;
     width: 200px;
     padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 input[type="color"] {
@@ -52,18 +54,17 @@ input[type="color"] {
 input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 5px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(16, 16, 17, 0.473) 0px 7px 29px 0px;
 }
 .sketch-frame {
     display: flex;
-    /* justify-content: space-between; */
     flex-direction: column;
     align-items: center;
     background-color: #C00000;
     border-radius: 10px;
     height: 600px;
     width: 600px;
-    
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 
@@ -84,7 +85,6 @@ input[type="color"]::-webkit-color-swatch {
     align-items: center;
     flex-wrap: wrap;
     background-color: rgb(238, 238, 238);
-
     border-radius: 5px;
     height: 400px;
     width: 400px;
@@ -102,4 +102,136 @@ input[type="color"]::-webkit-color-swatch {
     border-radius: 100%;
     height: 90px;
     width: 90px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #F7D057;
+    border-style: none;
+    font-size: medium;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #C00000;
+    border: 1px solid #F7D057;
+    border-radius: 5px;
+}
+
+button:hover {
+    color: #C00000;
+    background-color: #F7D057;
+    cursor: pointer;
+}
+
+.active-btn {
+    color: #C00000;
+    background-color: #F7D057;
+}
+
+button:active {
+    color: #C00000;
+    background-color: #F7D057;
+    cursor: pointer;
+}
+
+#grid-size {
+    color: #F7D057;
+    font-size: large;
+}
+
+input[type=range] {
+    height: 28px;
+    margin: 10px 0;
+    width: 100%;
+    appearance: none;
+    background-color: transparent;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #F7D057;
+    border-radius: 5px;
+    border: 1px solid #F7D057;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #f2f2f2;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #F7D057;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: #F7D057;
+    border-radius: 5px;
+    border: 1px solid #F7D057;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 1px solid #f2f2f2;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #F7D057;
+    border: 1px solid #F7D057;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #F7D057;
+    border: 1px solid #F7D057;
+    border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    margin-top: 1px;
+    border: 1px solid #f2f2f2;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #F7D057;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #F7D057;
 }
