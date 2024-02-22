@@ -1,6 +1,7 @@
 const MAX_GRID_SIZE = 400;
 const gridAreaCalculation = MAX_GRID_SIZE * MAX_GRID_SIZE;
 
+const sketchFrame = document.getElementById("sketch-frame");
 const sketchContainer = document.getElementById("container");
 const colorPicker = document.getElementById("color-picker");
 const pickColorButton = document.getElementById("colorpick-btn");
@@ -50,7 +51,8 @@ pickColorButton.addEventListener('click', function() {
     normalColorEnabled = true;
     randomColorEnabled = false;
     eraserEnabled = false;
-})
+});
+
 randomColorButton.addEventListener('click', function() {
     this.classList.add('active-btn');
     pickColorButton.classList.remove('active-btn');
@@ -58,7 +60,7 @@ randomColorButton.addEventListener('click', function() {
     normalColorEnabled = false;
     randomColorEnabled = true;
     eraserEnabled = false;
-})
+});
 
 eraserButton.addEventListener('click', function() {
     this.classList.add('active-btn');
@@ -67,14 +69,16 @@ eraserButton.addEventListener('click', function() {
     normalColorEnabled = false;
     randomColorEnabled = false;
     eraserEnabled = true;
-})
+});
 
 squareNumInput.addEventListener('input', function () {
     rowsNumber = columnsNumber = this.value;
     sketchContainer.textContent = "";
     gridSizeDiv.textContent = this.value + " x " + this.value;
     createGridOfSquares(rowsNumber, columnsNumber);
-})
+});
+
+sketchContainer.addEventListener('mouseleave', desactivateColoring);
 
 
 function colorSquare(event) {
