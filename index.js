@@ -78,7 +78,7 @@ squareNumInput.addEventListener('input', function () {
     createGridOfSquares(rowsNumber, columnsNumber);
 });
 
-sketchContainer.addEventListener('mouseleave', desactivateColoring);
+sketchFrame.addEventListener('mouseleave', desactivateColoring);
 
 
 function colorSquare(event) {
